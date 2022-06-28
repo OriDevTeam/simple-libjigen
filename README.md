@@ -28,8 +28,8 @@ Or converting a unified racedata file from Legacy to JSON
 
 **Note**: ⚠️ means that implementation is in progress️
 
-You can type 'formats' with 'help' command to see the available format names
-> python main.py --formats --help
+You can type the 'help' command to see the available format groups
+> python main.py --help
 
 ## Warning Notes
 **Optimization**: simple-libjigen is not optimized for performance (parsing/converting lacking optimization),
