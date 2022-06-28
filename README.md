@@ -25,6 +25,7 @@ Or converting a unified racedata file from Legacy to JSON
 | Item Proto   | ❌      | ❌    | ⚠️  | ⚠️  |
 | Mob Proto    | ❌      | ❌    | ⚠️  | ⚠️  |
 | Script Files | ⚠️     | ⚠️   | ❌   | ❌   |
+
 **Note**: ⚠️ means that implementation is in progress️
 
 You can type 'formats' with 'help' command to see the available format names
