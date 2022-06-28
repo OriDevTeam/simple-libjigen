@@ -9,5 +9,7 @@ import dev_tests
 
 
 if __name__ == '__main__':
-	dev_tests.tests_main('--from-format=legacy --convert=json '
-						 'script racedata --source="tests/data/racedata/legacy/unified-racedata.msm"'.split())
+	dev_tests.tests_main(r'--from-format=legacy --convert=json '
+						 r'--output=unified-sample.json '
+						 r'script racedata --source=../tests/data/racedata/legacy/unified-sample.msm '
+						 .split())

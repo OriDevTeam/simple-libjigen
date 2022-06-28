@@ -1,0 +1,31 @@
+{
+    "BaseModelFileName": "/directory/to/base_model.extension",
+    "HairData": {
+        "PathName": "/directory/to/hair_models",
+        "HairDataCount": 2,
+        "HairData00": {
+            "HairIndex": 0,
+            "Model": "/sub-directory/model.extension"
+        },
+        "HairData01": {
+            "HairIndex": 0,
+            "Model": "/sub-directory/model.extension"
+        }
+    },
+    "ShapeData": {
+        "PathName": "/directory/to/shape_models",
+        "ShapeDataCount": 2,
+        "ShapeData00": {
+            "ShapeIndex": 0,
+            "Model": "sub-directory/model.extension",
+            "SourceSkin": "sub-directory/model_texture0.extension",
+            "TargetSkin": "sub-directory/model_texture0.extension"
+        },
+        "ShapeData01": {
+            "ShapeIndex": 1,
+            "Model": "sub-directory/model.extension",
+            "SourceSkin": "sub-directory/model_texture0.extension",
+            "TargetSkin": "sub-directory/model_texture1.extension"
+        }
+    }
+}

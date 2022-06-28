@@ -5,13 +5,13 @@ from pathlib import Path
 
 
 ## Application Imports
+from simple_libjigen.factory import factory
+from simple_libjigen.data.map.map import Map, MapSetting, MapProperty
+from simple_libjigen.parsers.script.legacy import ScriptLegacyFormatParser, GroupScriptLegacyFormatParser
+from simple_libjigen.data.map.chunk import MapChunk, ChunkArea, ChunkAmbienceArea, ChunkProperty, ChunkObject
 
 
 ## Library Imports
-from simple_libjigen.factory import factory
-from simple_libjigen.data.map.map import Map, MapSetting, MapProperty
-from simple_libjigen.parsers.script.legacy import ScriptLegacyFormatParser
-from simple_libjigen.data.map.chunk import MapChunk, ChunkArea, ChunkAmbienceArea, ChunkProperty, ChunkObject
 
 
 @factory.register
@@ -29,7 +29,8 @@ class MapLegacyFormatParser:
 	
 	@classmethod
 	def parse_setting(cls, path: str) -> MapSetting:
-		fields = ScriptLegacyFormatParser.parse(Path(path).read_text())
+		content = Path(path).read_text()
+		fields = ScriptLegacyFormatParser.parse(content)
 		script_type = fields.pop('ScriptType', None)
 		
 		if 'MapSetting' != script_type:
@@ -109,13 +110,15 @@ class ChunkLegacyFormatParser:
 		if 'AreaAmbienceDataFile' not in content:
 			raise AttributeError(f"File content does notcontain the definition 'AreaDataFile', path {path}")
 		
-		fields = LegacyFormatParser.parse(Path(path).read_text())
+		fields = GroupScriptLegacyFormatParser.parse(content)
 		
 		return ChunkAmbienceArea(**fields)
 	
 	@classmethod
 	def parse_property(cls, path: str) -> ChunkProperty:
-		fields = LegacyFormatParser.parse(Path(path).read_text())
+		content = Path(path).read_text()
+		
+		fields = ScriptLegacyFormatParser.parse(content)
 		script_type = fields.pop('ScriptType', None)
 		
 		if 'AreaProperty' != script_type:

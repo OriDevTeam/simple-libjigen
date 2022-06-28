@@ -97,7 +97,18 @@ class GroupScriptLegacyFormatParser:
 				group_index += 1
 				continue
 			
-			lines += f'"{kv[0]}":{kv[1]}'
+			if len(kv) < 2:
+				continue
+			
+			key, value = kv
+			
+			if value.isnumeric() or re.match(r'[+-]?[\d.]+', value):
+				pass
+			
+			elif '"' not in value:
+				value = f'"{value}"'
+			
+			lines += f'"{key}":{value}'
 			
 			if '{' not in contents[idx+1] or '}' not in contents[idx+1]:
 				lines += ',\n'

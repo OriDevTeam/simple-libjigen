@@ -3,6 +3,7 @@ from argparse import ArgumentParser
 
 
 ## Application Imports
+from simple_libjigen.converters.map import converter
 from simple_libjigen.converters.script import racedata
 
 
@@ -25,7 +26,10 @@ def setup_args():
 	)
 	
 	map_parser = subparsers.add_parser('map', help='Handles the map data format')
-	map_parser.add_argument('-p', type=bool, help='Specifies if the source data is parted or unified')
+	# map_parser.add_argument('-p', type=bool, help='Specifies if the source data is parted or unified')
+	map_parser.add_argument(
+		'-s', '--source', type=str, help='Source location of the racedata data'
+	)
 	
 	args_parser.add_argument(
 		'-ff', '--from-format', type=str, help='Expected format of the given data',
@@ -44,12 +48,12 @@ def setup_args():
 
 
 def run_commands(args):
-	if args.map:
-		racedata.convert(not args.parted, args.from_format, args.convert)
+	if args.format == 'map':
+		converter.convert(args.source, args.output, args.from_format, args.convert)
 	
-	elif args.script:
-		if args.racedata:
-			racedata.convert(not args.parted, args.from_format, args.convert)
+	elif args.format == 'script':
+		if args.script:
+			racedata.convert(not args.parted, args.source, args.output, args.from_format, args.convert)
 
 
 if __name__ == '__main__':

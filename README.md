@@ -23,8 +23,8 @@ Or converting a unified racedata file from Legacy to JSON
 | Format       | Legacy | JSON | XML | CSV |
 |--------------|--------|------|-----|-----|
 | Map          | ✔️     | ⚠️   | ❌   | ❌   |
-| Item Proto   | ❌      | ❌    | ⚠️  | ⚠️  |
-| Mob Proto    | ❌      | ❌    | ⚠️  | ⚠️  |
+| Item Proto   | ⚠️     | ❌    | ⚠️  | ⚠️  |
+| Mob Proto    | ⚠️     | ❌    | ⚠️  | ⚠️  |
 | Script Files | ⚠️     | ⚠️   | ❌   | ❌   |
 
 **Note**: ⚠️ means that implementation is in progress️
