@@ -1,6 +1,7 @@
 # simple-libjigen
 
-A partial implementation of `libjigen-rust` only for data format handling
+A partial implementation of `libjigen-rust `(non-existent, coming in the future) only for 
+simple data format handling such as converting, compartmentalization, etc...
 
 If you just want to read/write, visualize and convert data formats,
 this is the convenience tool
