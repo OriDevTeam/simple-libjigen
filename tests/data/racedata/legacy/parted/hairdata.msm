@@ -1,0 +1,16 @@
+Group HairData
+{
+    PathName    "/directory/to/hair_models"
+    HairDataCount   2
+
+    Group HairData00
+    {
+        HairIndex   0
+        Model   "/sub-directory/model.extension"
+    }
+    Group HairData01
+    {
+        HairIndex   0
+        Model   "/sub-directory/model.extension"
+    }
+}

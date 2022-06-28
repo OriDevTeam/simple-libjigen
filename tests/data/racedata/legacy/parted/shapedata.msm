@@ -1,0 +1,23 @@
+Group ShapeData
+{
+    PathName    "/directory/to/shape_models"
+
+    ShapeDataCount  2
+
+    Group ShapeData00
+    {
+        ShapeIndex  0
+
+        Model   "sub-directory/model.extension"
+        SourceSkin  "sub-directory/model_texture0.extension"
+        TargetSkin  "sub-directory/model_texture0.extension"
+    }
+    Group ShapeData01
+    {
+        ShapeIndex  1
+
+        Model   "sub-directory/model.extension"
+        SourceSkin  "sub-directory/model_texture0.extension"
+        TargetSkin  "sub-directory/model_texture1.extension"
+    }
+}

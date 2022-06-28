@@ -1,0 +1,4 @@
+ScriptType RaceDataScript
+
+BaseModelFileName   "/directory/to/base_model.extension"
+
