@@ -11,10 +11,12 @@ To check which commands are available type:
 > python main.py --help
 
 ## Converting
-Converting from a format to another is simple, for example converting a map
+Converting from a format to another is simple, for example converting a **map**
 from Legacy format to JSON
+> python main.py --from-format=legacy --convert --target=json --out='result-directory/' map --source='map-directory'
 
-> python main.py --map 'directory' --convert --target=json --out='result-directory/'
+Or converting a unified racedata file from Legacy to JSON
+> python main.py --from-format=legacy --convert --target=json --out='result-directory/' script racedata 'racedata-path' --parted=False
 
 ### Formats
 | Format       | Legacy | JSON | XML | CSV |
@@ -23,7 +25,7 @@ from Legacy format to JSON
 | Item Proto   | ❌      | ❌    | ⚠️  | ⚠️  |
 | Mob Proto    | ❌      | ❌    | ⚠️  | ⚠️  |
 | Script Files | ⚠️     | ⚠️   | ❌   | ❌   |
-**Note**: ⚠️ means that implementation is on progress️
+**Note**: ⚠️ means that implementation is in progress️
 
 You can type 'formats' with 'help' command to see the available format names
 > python main.py --formats --help
