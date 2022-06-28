@@ -6,7 +6,7 @@ import unittest
 
 
 ## Library Imports
-from lib.parsers.script.racedata.legacy import RaceDataLegacyParser
+from simple_libjigen.parsers.script.racedata.legacy import RaceDataLegacyParser
 
 
 class RaceDataParsingOperations(unittest.TestCase):

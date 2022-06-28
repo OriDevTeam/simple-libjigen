@@ -1,8 +1,9 @@
 ## System Imports
 from argparse import ArgumentParser
 
+
 ## Application Imports
-from lib.converters.script import racedata
+from simple_libjigen.converters.script import racedata
 
 
 ## Library Imports
